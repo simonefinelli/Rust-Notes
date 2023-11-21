@@ -23,7 +23,7 @@ fn main() {
     let arr1 = [-1; 100]; // creates an array with length 100 and default value -1
 
     // Vectors (not fixed length)
-    let vec1: Vec<f64> = vec![1., 3., 5.];  // elements of the same
+    let vec1: Vec<f64> = vec![1., 3., 5.];  // elements of the same type
 
     // Tuples
     let tuple = ("Age", 42, "Height", 179.9);
