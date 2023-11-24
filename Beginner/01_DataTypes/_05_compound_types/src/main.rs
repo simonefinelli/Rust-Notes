@@ -27,7 +27,7 @@ fn main() {
 
     // Tuples
     let tuple = ("Age", 42, "Height", 179.9);
-    let some_value = tuple.2;
+    let some_value = tuple.1;
     let (age, age_value, height, h_value) = tuple;  // unpack
     println!("{some_value} == {age_value}");
 
