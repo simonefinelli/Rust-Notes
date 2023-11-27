@@ -19,7 +19,7 @@ fn foo(s: &str, n: i32) {
     println!("{s}, {n}");
 }
 
-fn doo(n1:f32, n2:f32) -> f64  {  // the return value is specified with ->
+fn doo(n1: f32, n2: f32) -> f64  {  // the return value is specified with ->
     (n1 / n2) as f64  // the last line in function can be used for return (and we do not are forced to use a ;)
     // return (n1 / n2) as f64;  // this work as other programming languages
 }
