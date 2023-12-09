@@ -27,7 +27,7 @@ fn main() {
         let v6: String = v5;
         println!("v6 is: {v6}");
     }
-    // println!("v5 is: {v6}");  // v6 will be dropped when we exit from the inner scope
+    // println!("v6 is: {v6}");  // v6 will be dropped when we exit from the inner scope
                                  // in this case also the Heap memory is free (with Stack), so we
                                  // do not have MEMORY LEAKS and DANGLING POINTERS.
 
