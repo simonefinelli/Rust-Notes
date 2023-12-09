@@ -2,7 +2,7 @@
     Borrowing in a concept that is tied with Ownership.
     Borrowing allows to interact with data in a safe and efficient manner.
     This concept can be summarized with:
-     - Establish a reference to some data (like pointers, but some specific rules);
+     - Establish a reference to some data (like pointers, but with some specific rules);
      - References do not assume ownership of values (think at the word borrow).
 
     Borrowing is useful to prevent unnecessary memory usage (instead of copy every time the lvalue).
@@ -10,11 +10,12 @@
     There are two rules that references must follow:
      - At any time, we can have either one mutable reference or any number of immutable references.
      - References must always be valid.
-    These rules resolve:
+
+    Using these rules, we resolve, in general:
      - Data race
      - Dangling references
 
-    In Rust references are created using &.
+    TIP: In Rust references are created using & symbol.
  */
 
 fn main() {
