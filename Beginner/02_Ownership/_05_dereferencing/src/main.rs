@@ -36,6 +36,7 @@ fn main() {
                                    // we cannot have multiple mutable references).
 
     // no problems with immutable references
+    let ref2 = &heap_data;
     let ref3 = ref2;
     let ref4 = ref2;
 
