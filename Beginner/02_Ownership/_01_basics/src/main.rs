@@ -30,11 +30,10 @@ fn main() {
     // println!("v6 is: {v6}");  // v6 will be dropped when we exit from the inner scope
                                  // in this case also the Heap memory is free (with Stack), so we
                                  // do not have MEMORY LEAKS and DANGLING POINTERS.
-
     // NOTE: all this mechanism is done a compile time, so we have zero runtime cost.
 
     /**
-        Recapitulation
+        Recapitulation:
 
         In Rust when we assign the value of one variable to another, the value is being MOVED, leading
         to a change of Ownership!
