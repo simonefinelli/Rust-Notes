@@ -9,6 +9,11 @@
         - immutable reference: &self (used to access the data, without modifying it);
         - mutable reference: &mut self (modify data);
         - take and return ownership (see sell method).
+
+    Another kind of functions that we can use in a implementation block are Associated functions (
+    static functions in other programming languages).
+
+    A special function is 'new': the constructor function.
  */
 
 struct Car {
@@ -19,6 +24,15 @@ struct Car {
 }
 
 impl Car {  // extending functionality of Car
+    fn new(name: String, fabric_year: u32) -> Self {  // new is a static function
+        Self {
+            owner: name,
+            year: fabric_year,
+            fuel_level: 0.0, // default value
+            price: 0
+        }
+    }
+
     fn display_car_info(&self) {  // now the function is a method of a Car instance, so we can use 'self' to access the instance.
         println!(
             "Owner: {}, Year: {}, fuel: {}, price: {}",
@@ -32,6 +46,15 @@ impl Car {  // extending functionality of Car
     fn sell(self) -> Self {  // Self with capital letter indicates the struct Car (we can use Car also)
         self
     }
+
+    fn early_insurance() -> u32 {  // associated functions do not take self as parameter
+        780
+    }
+    fn selling_prince(&self) -> u32 {
+        self.price + Car::early_insurance()  // associated methods can be called using :: notation
+    }
+
+
 }
 
 fn main() {
@@ -50,6 +73,9 @@ fn main() {
     let new_owner = personal_car.sell();
     new_owner.display_car_info();
     // personal_car.display_car_info();  // now not allowed anymore - error: borrow of moved value: `personal_car`
+
+    let car_constructor = Car::new("Simox".to_string(), 2023);  // this could avoid to write
+                                                                               // the code between 61 and 66
 }
 
 
