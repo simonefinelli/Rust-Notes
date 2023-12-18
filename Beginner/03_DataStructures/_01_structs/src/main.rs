@@ -2,8 +2,6 @@
     To group related data together we can use Structs.
  */
 
-use std::backtrace::BacktraceStatus::Captured;
-
 struct Car {
     owner: String,
     year: u32,
