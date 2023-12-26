@@ -12,12 +12,10 @@ use std::collections::{hash_map, HashMap};
 fn main() {
     // declare an HashMap
     let mut person: HashMap<&str, i32> = HashMap::new();
-
     // insert pairs
     person.insert("Gandalf", 300);
     person.insert("Bilbo", 111);
     person.insert("Frodo", 40);
-
     // access to elements
     println!("The age is {:?}", person.get("Bilbo").unwrap());  // unwarap because the get function will return an option enum type
 
@@ -38,4 +36,10 @@ fn main() {
     // update a value
     person.insert("Frodo", 90);  // in this case the 40 is overwritten
     println!("The age is {:?}", person.get("Frodo").unwrap());
+
+    // to avoid the overwriting behaviour we can use entry function
+    let mut job: HashMap<&str, &str> = HashMap::new();
+    job.entry("Bob").or_insert("Doctor");  // Doctor is insert only if for Bob entry no value already exists (otherwise no value updates)
+    job.entry("Bob").or_insert("Engineer");  // no effects
+
 }
