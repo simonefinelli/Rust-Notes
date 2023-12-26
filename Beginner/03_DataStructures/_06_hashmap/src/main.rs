@@ -7,7 +7,7 @@
     HashMaps are part of the Rust Standard Library.
  */
 
-use std::collections::{hash_map, HashMap};
+use std::collections::HashMap;
 
 fn main() {
     // declare an HashMap
