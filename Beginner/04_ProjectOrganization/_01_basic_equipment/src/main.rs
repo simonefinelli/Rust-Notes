@@ -17,7 +17,7 @@
 
         To run a binary we can use:
             ~$ cargo run --bin package_name  // package_name in this cas is _01_basic_equipment
-            ~$ cargo run --bin bin  // using specific bin in bin folder
+            ~$ cargo run --bin bin1  // using specific bin in bin folder
 
      - Crates:
         A Crate is a compilation unit that houses a set of Modules and their associated items (functions and structures).
