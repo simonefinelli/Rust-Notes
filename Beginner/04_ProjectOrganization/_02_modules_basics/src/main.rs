@@ -9,6 +9,9 @@
     modules the elements' visibility modifier can be set explicit to public, using 'pub' keyword.
     Also, we can make an entire module public (if it have to expose all), but remember that, make a module public do not
     automatically convert all elements of it public too (for each element we still have to use the pub keyword).
+
+    To have a visual representation of the Library we can use:
+     - cargo modules structure --lib
  */
 fn main() {
     println!("Hello, world!");
