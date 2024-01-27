@@ -19,6 +19,7 @@
 
     TIP: only focus on the test section! We can view something like this:
          test tests::check_not_bigger ... ok
+         test tests::take_long_test ... ignored
          test tests::check_smaller ... ok
          test tests::not_creation ... FAILED
  */
@@ -72,10 +73,16 @@ mod tests {
         let c1 = shapes::Circle::new1(-1.0)?;  // ? is used to propagate the error
         Ok(())
     }
+
+    #[test]
+    #[ignore]  // this flag is useful to avoid to execute a test
+    fn take_long_test() {
+        // very long time-consuming code
+    }
 }
 
 /*
-    We can use other assection statement, like:
+    We can use other assertion statement, like:
         assert_ne!()  -> the opposite of assert_eq!()
         assert() -> check boolean value, true for OK, false for FAIL
  */
