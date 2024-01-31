@@ -1,0 +1,1 @@
+In helpers folder we put all the function that can be used to support the Tests, without see those as tests.
